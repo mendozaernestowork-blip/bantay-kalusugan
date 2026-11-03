@@ -1,5 +1,0 @@
-When the signed release APK is ready:
-1. Put it in this folder, named exactly: bantay-kalusugan.apk  (GitHub allows files up to 100 MB)
-2. In index.html, search for "WHEN THE APK IS READY" and follow the note there (one line to swap).
-3. In index.html, add the downloadUrl line shown in the "_comment" of the app info near the top.
-4. Delete this text file.
