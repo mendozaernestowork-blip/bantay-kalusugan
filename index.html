@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="google-site-verification" content="_19XjJLtPvqaYsYE5ci7mL77Yllay3-nt7ziEY2uzqk" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bantay-Kalusugan: Diabetes and Heart Risk Screening App</title>
   <meta name="description" content="Free Android app that screens your risk for type 2 diabetes and heart disease, explains what shaped your result, and suggests small steps. Made for Filipinos." />
@@ -21,11 +20,10 @@
   <meta property="og:image" content="https://mendozaernestowork-blip.github.io/bantay-kalusugan/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Bantay-Kalusugan app showing a Moderate risk result with diabetes and heart health points" />
+  <meta property="og:image:alt" content="Bantay-Kalusugan app showing two lifestyle risk scores out of 100: diabetes 23 and heart disease 20" />
   <meta property="og:locale" content="en_PH" />
   <meta property="og:locale:alternate" content="fil_PH" />
   <meta name="twitter:card" content="summary_large_image" />
-  
 
   <script type="application/ld+json">
   {
@@ -35,11 +33,11 @@
     "alternateName": "Bantay Kalusugan",
     "operatingSystem": "Android 7.0 or newer",
     "applicationCategory": "HealthApplication",
-    "softwareVersion": "1.0",
+    "softwareVersion": "2.5",
     "inLanguage": ["en", "fil"],
-    "description": "A free screening app that estimates your risk level for type 2 diabetes and heart disease from a short questionnaire, explains which habits shaped the result, and suggests small steps.",
+    "description": "A free screening app that gives two lifestyle risk scores, one for type 2 diabetes and one for heart disease, from a short questionnaire, explains which answers shaped them, and suggests small steps.",
     "url": "https://mendozaernestowork-blip.github.io/bantay-kalusugan/",
-    "_comment": "When the APK is uploaded, add: \"downloadUrl\": \"https://mendozaernestowork-blip.github.io/bantay-kalusugan/downloads/bantay-kalusugan.apk\",",
+    "downloadUrl": "https://github.com/mendozaernestowork-blip/bantay-kalusugan/releases/latest/download/bantay-kalusugan.apk",
     "image": "https://mendozaernestowork-blip.github.io/bantay-kalusugan/og-image.jpg",
     "screenshot": ["https://mendozaernestowork-blip.github.io/bantay-kalusugan/images/screen-result.webp", "https://mendozaernestowork-blip.github.io/bantay-kalusugan/images/screen-home.webp"],
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PHP" },
@@ -110,7 +108,7 @@
     .floating-card strong, .floating-card small { display: block; }
     .floating-card strong { font-size: 14px; }
     .floating-card small { margin-top: 2px; color: var(--muted); font-size: 12px; }
-    .card-a { top: 18%; left: 0; } .card-b { right: 0; bottom: 18%; }
+    .card-a { top: 56%; left: 0; } .card-b { right: 0; bottom: 10%; }
     .mini-icon { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 10px; color: var(--blue); background: var(--sky); font-weight: 800; }
 
     .trust-strip { border-block: 1px solid var(--line); background: #fbfdff; }
@@ -160,13 +158,16 @@
     .explain-card p { max-width: 600px; color: #dce7ff; }
     .risk-example { padding: 26px; border-radius: 24px; color: var(--ink); background: #fff; box-shadow: 0 25px 50px rgba(0,0,0,.17); }
     .risk-label { color: var(--muted); font-size: 13px; font-weight: 700; }
-    .risk-level { margin: 2px 0 14px; color: var(--amber); font: 800 30px var(--display); letter-spacing: -.03em; }
-    .meter { margin-bottom: 12px; }
-    .meter-top { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; }
-    .meter-bar { position: relative; display: flex; height: 9px; margin-top: 6px; overflow: hidden; border-radius: 9px; }
-    .meter-bar i { display: block; }
-    .meter-bar .lo { width: 28%; background: #bfeee0; } .meter-bar .mo { width: 25%; background: #fde68a; } .meter-bar .hi { flex: 1; background: #fbd0d6; }
-    .meter-dot { position: absolute; top: 50%; width: 15px; height: 15px; margin: -7.5px 0 0 -7.5px; border: 3px solid #fff; border-radius: 50%; background: #13203a; }
+    .score-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0 16px; }
+    .score-tile { padding: 14px; border: 1px solid #bae6fd; border-radius: 16px; background: #f0f9ff; }
+    .score-tile > span { display: block; font-size: 13px; font-weight: 800; }
+    .score-tile b { display: block; margin-top: 4px; font: 800 34px/1 var(--display); letter-spacing: -.03em; }
+    .score-tile small { margin-left: 4px; color: var(--muted); font: 600 13px var(--body); letter-spacing: 0; }
+    .score-tile em { display: block; margin-top: 6px; color: #075985; font-size: 13px; font-style: normal; font-weight: 800; }
+    .score-bar { position: relative; display: block; height: 7px; margin-top: 10px; border-radius: 7px; background: linear-gradient(90deg, #93c5fd, #bae6fd, #fcd34d); }
+    .score-bar i { position: absolute; top: 50%; width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border: 2px solid #fff; border-radius: 50%; background: #13203a; }
+    .try-row { margin-top: 6px; padding: 12px 14px; border-radius: 14px; color: #065f46; background: #ecfdf5; font-size: 14px; }
+    .try-row strong { display: block; margin-bottom: 2px; }
     .factor { display: flex; justify-content: space-between; gap: 15px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 14px; }
     .factor b.up { color: var(--red); } .factor b.down { color: var(--mint-ink); }
 
@@ -182,8 +183,8 @@
     .download-meta li { padding: 6px 10px; border: 1px solid rgba(255,255,255,.3); border-radius: 8px; font-size: 13px; }
     .btn-light { color: #123b8f; background: #fff; }
     .btn-ghost { border-color: rgba(255,255,255,.45); color: #fff; }
-    .btn-soon { cursor: default; opacity: .9; }
-    .btn-soon:hover { transform: none; }
+    .release-link { margin: 16px 0 0; font-size: 14px; }
+    .release-link a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
     .download-card .phone { width: 210px; margin-inline: auto; }
 
     .install-section { background: var(--soft); }
@@ -295,7 +296,7 @@
       <div class="hero-copy reveal">
         <span class="eyebrow">Free health screening app for Android</span>
         <h1>Understand your risk for <span>diabetes and heart disease.</span></h1>
-        <p class="hero-lead">Bantay-Kalusugan asks about your everyday habits and health history, shows your risk level for type 2 diabetes and heart disease, and explains in plain language what shaped it and what small steps could help.</p>
+        <p class="hero-lead">Bantay-Kalusugan asks about your everyday habits and health history, gives you two scores, one for type 2 diabetes and one for heart disease, and explains in plain language what shaped them and what small steps could help.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#download">Get the app</a>
           <a class="btn btn-secondary" href="#screens">See the app</a>
@@ -303,7 +304,7 @@
         <ul class="hero-facts"><li>Free</li><li>English and Tagalog</li><li>About 10 minutes</li><li>Not a diagnosis</li></ul>
       </div>
       <div class="hero-visual reveal">
-        <div class="phone"><img src="images/screen-result.webp" width="600" height="1298" fetchpriority="high" alt="Result screen showing Moderate risk, with diabetes at 5 points and heart health at 6 points on Low, Moderate and High bands"></div>
+        <div class="phone"><img src="images/screen-result.webp" width="600" height="1298" fetchpriority="high" alt="Result screen with two lifestyle risk scores out of 100: diabetes 23 and heart disease 20, both in the medium range"></div>
         <div class="floating-card card-a"><span class="mini-icon" aria-hidden="true">✦</span><div><strong>Explainable</strong><small>See what raised or lowered it</small></div></div>
         <div class="floating-card card-b"><span class="mini-icon" aria-hidden="true">✓</span><div><strong>Made for Filipinos</strong><small>Trained on local answers</small></div></div>
       </div>
@@ -319,9 +320,9 @@
       </div>
       <div class="feature-grid">
         <article class="feature-card reveal"><div class="feature-icon mint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6M9 4a2 2 0 0 0-2 2v0h10v0a2 2 0 0 0-2-2M7 6H5v15h14V6h-2"/><path d="m9 13 2 2 4-4"/></svg></div><h3>A short, guided questionnaire</h3><p>Six sections on your health history, measurements, meals, activity, sleep and stress, in English and Tagalog.</p></article>
-        <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>A clear risk level</h3><p>Low, Moderate or High, with separate diabetes and heart health points so you can see where you stand.</p></article>
-        <article class="feature-card reveal"><div class="feature-icon violet"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v5M12 16h.01"/></svg></div><h3>The "why" behind it</h3><p>See which habits raised or lowered your result, each with a short explanation of why it matters.</p></article>
-        <article class="feature-card reveal"><div class="feature-icon gold"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg></div><h3>Small, personal steps</h3><p>Suggestions picked from your own answers, each showing how many points it could take off your score.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>Two clear scores</h3><p>A diabetes score and a heart disease score, each from 0 to 100 with its own level, so you can see where you stand on both.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon violet"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v5M12 16h.01"/></svg></div><h3>The "why" behind it</h3><p>See which answers pushed each score up or down and why, then try a change to see how your scores could move.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon gold"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg></div><h3>Small, personal steps</h3><p>Suggestions picked from your own answers, each showing how much it could lower your scores.</p></article>
         <article class="feature-card reveal"><div class="feature-icon mint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div><h3>Your habits at a glance</h3><p>Activity, vegetables and fruit, sweet drinks, sleep and BMI compared with health guidelines, plus a daily tip.</p></article>
         <article class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.4 7 10 4-1.6 7-5.6 7-10V6l-7-3Z"/></svg></div><h3>Fair and private by design</h3><p>The model was checked across sex, age, income and education groups. Nothing is saved until you give consent.</p></article>
       </div>
@@ -336,7 +337,7 @@
         <li class="step reveal"><h3>Sign up</h3><p>Use your mobile number or email. We send a one-time code to confirm it is you.</p></li>
         <li class="step reveal"><h3>Give consent</h3><p>Read what is collected and why. Your answers are only saved after you agree.</p></li>
         <li class="step reveal"><h3>Answer the questionnaire</h3><p>About 10 minutes on your habits, measurements and health history.</p></li>
-        <li class="step reveal"><h3>See your result</h3><p>Your risk level, what shaped it, and small steps you can take, all on one screen.</p></li>
+        <li class="step reveal"><h3>See your result</h3><p>Your two scores, what shaped them, and small steps you can take, all on one screen.</p></li>
       </ol>
     </div></section>
 
@@ -349,12 +350,12 @@
       <article class="showcase-row">
         <div class="showcase-copy reveal">
           <h3>Your home page, at a glance.</h3>
-          <p>Your latest risk level with diabetes and heart health meters, how your points changed since last time, and how your everyday habits compare with health guidelines.</p>
-          <ul class="check-list"><li>Latest result and change since last time</li><li>Habits compared with WHO guidelines</li><li>A new tip every day</li></ul>
+          <p>Your latest diabetes and heart disease scores, how each one changed since last time, and how your everyday habits compare with health guidelines.</p>
+          <ul class="check-list"><li>Both scores and the change since last time</li><li>Habits compared with WHO guidelines</li><li>A new tip every day</li></ul>
         </div>
         <div class="screenshot-frame reveal"><div class="screenshot-pair">
-          <div class="phone"><img src="images/screen-home.webp" width="600" height="1298" loading="lazy" alt="Home screen with the latest result: Moderate risk, diabetes 5 points, heart health 6 points"></div>
-          <div class="phone"><img src="images/screen-home-habits.webp" width="600" height="1298" loading="lazy" alt="Habits at a glance: physical activity, vegetables and fruit, sweet drinks, sleep and BMI compared with goals"></div>
+          <div class="phone"><img src="images/screen-home.webp" width="600" height="1298" loading="lazy" alt="Home screen with the latest scores, diabetes 23 and heart disease 20 out of 100, and how each went down since last time"></div>
+          <div class="phone"><img src="images/screen-home-habits.webp" width="600" height="1298" loading="lazy" alt="Habits at a glance: physical activity, vegetables and fruit, sweet drinks, sleep, BMI, and smoking and vaping compared with goals"></div>
         </div></div>
       </article>
       <article class="showcase-row reverse">
@@ -363,17 +364,17 @@
           <p>Six short sections, one question at a time, with large answer buttons and every question in both Tagalog and English.</p>
           <ul class="check-list"><li>Progress shown section by section</li><li>Bilingual questions and answers</li><li>Review your answers before submitting</li></ul>
         </div>
-        <div class="screenshot-frame reveal"><div class="phone"><img src="images/screen-survey.webp" width="600" height="1298" loading="lazy" alt="Questionnaire screen: Impormasyon tungkol sa iyo, with the age question answered"></div></div>
+        <div class="screenshot-frame reveal"><div class="phone"><img src="images/screen-survey.webp" width="600" height="1298" loading="lazy" alt="Questionnaire screen, section 1 of 6: Impormasyon tungkol sa iyo, with the age question answered"></div></div>
       </article>
       <article class="showcase-row">
         <div class="showcase-copy reveal">
           <h3>More than a pass-or-fail result.</h3>
-          <p>Swipe through what is behind your result, what you can work on, your next steps, and how the result was made. It is a screening aid, not a medical diagnosis.</p>
-          <ul class="check-list"><li>What raised and lowered your result</li><li>Suggestions with points you could save</li><li>When to check again</li></ul>
+          <p>Swipe through what you can work on, how the model read your answers, and your next steps. Try a change to see how your scores could move before you change a habit. It is a screening aid, not a medical diagnosis.</p>
+          <ul class="check-list"><li>Which answers pushed each score up or down</li><li>Try a change and watch both scores move</li><li>Suggestions picked from your answers</li></ul>
         </div>
         <div class="screenshot-frame reveal"><div class="screenshot-pair">
-          <div class="phone"><img src="images/screen-result-why.webp" width="600" height="1298" loading="lazy" alt="What is behind your result: bars for smoking and vaping, family history, vegetables and fruit, with a short explanation"></div>
-          <div class="phone"><img src="images/screen-result-todo.webp" width="600" height="1298" loading="lazy" alt="What you can work on: three suggestions, each showing how many points it could save"></div>
+          <div class="phone"><img src="images/screen-result-why.webp" width="600" height="1298" loading="lazy" alt="How the model reads your answers: smoking and vaping, sweet drinks and rice raise the estimate, while vegetables and fruit lower it"></div>
+          <div class="phone"><img src="images/screen-result-try.webp" width="600" height="1298" loading="lazy" alt="Try a change: with sweet drinks cut to 1 to 2 times a week, the diabetes score goes from 23 to 17 and the heart disease score from 20 to 17"></div>
         </div></div>
       </article>
     </div></section>
@@ -382,41 +383,44 @@
       <div class="reveal">
         <span class="eyebrow light">Because context matters</span>
         <h2>A result is more useful when you can understand it.</h2>
-        <p>A label on its own raises more questions than it answers. Bantay-Kalusugan shows which of your answers shaped your result, in either direction, so you know what is worth working on and what is already going well.</p>
+        <p>A number on its own raises more questions than it answers. Bantay-Kalusugan shows which of your answers shaped each score, in either direction, so you know what is worth working on and what is already going well.</p>
         <p>Behind the scenes, a machine learning model trained on the answers of 391 Filipino adults gives each answer a weight, and the app explains those weights in everyday language.</p>
       </div>
-      <div class="risk-example reveal" aria-label="Example result">
+      <div class="risk-example reveal" role="group" aria-label="Example result">
         <span class="risk-label">Example result</span>
-        <div class="risk-level">Moderate risk</div>
-        <div class="meter"><div class="meter-top"><span>Diabetes</span><span>5 points</span></div><div class="meter-bar"><i class="lo"></i><i class="mo"></i><i class="hi"></i><span class="meter-dot" style="left:31%"></span></div></div>
-        <div class="meter"><div class="meter-top"><span>Heart health</span><span>6 points</span></div><div class="meter-bar"><i class="lo"></i><i class="mo"></i><i class="hi"></i><span class="meter-dot" style="left:37%"></span></div></div>
+        <div class="score-pair">
+          <div class="score-tile"><span>Diabetes</span><b>23<small>/ 100</small></b><em>Medium</em><span class="score-bar" aria-hidden="true"><i style="left:23%"></i></span></div>
+          <div class="score-tile"><span>Heart disease</span><b>20<small>/ 100</small></b><em>Medium</em><span class="score-bar" aria-hidden="true"><i style="left:20%"></i></span></div>
+        </div>
         <div class="factor"><span>Smoking and vaping</span><b class="up">↑ raises</b></div>
-        <div class="factor"><span>Family history</span><b class="up">↑ raises</b></div>
+        <div class="factor"><span>Sweet drinks</span><b class="up">↑ raises</b></div>
         <div class="factor"><span>Vegetables and fruit</span><b class="down">↓ lowers</b></div>
+        <div class="try-row"><strong>Try a change: sweet drinks 1 to 2 times a week</strong>Diabetes 23 to 17, heart disease 20 to 17</div>
       </div>
     </div></section>
 
     <section class="section responsibility"><div class="container responsibility-grid">
       <article class="reveal"><span class="eyebrow">Privacy</span><h3>Your trust matters.</h3><p>Before anything is saved, the app explains what is collected and why, and asks for your consent. Income and education answers are stored separately and are only used to check fairness. Read the full <a href="privacy.html">privacy policy</a>.</p></article>
-      <article class="reveal"><span class="eyebrow">Responsible use</span><h3>Helpful information, not a diagnosis.</h3><p>Bantay-Kalusugan is for screening, learning and research. A result is not a diagnosis and does not replace a check-up. If your result is High, please visit a doctor or your barangay health center.</p></article>
+      <article class="reveal"><span class="eyebrow">Responsible use</span><h3>Helpful information, not a diagnosis.</h3><p>Bantay-Kalusugan is for screening, learning and research. A result is not a diagnosis and does not replace a check-up. If either score is in the higher range, or the app suggests a check-up, please visit a doctor or your barangay health center.</p></article>
     </div></section>
 
     <section class="section download-section" id="download"><div class="container"><div class="download-card">
       <div class="download-copy reveal">
         <span class="eyebrow light">Android app</span>
         <h2>Download Bantay-Kalusugan.</h2>
-        <p>Free to download and use. Install it on your Android phone in a few taps, then follow the guide below if your phone asks for permission. The download will appear here as soon as the first release is ready.</p>
-        <!-- EDIT: add the file size (e.g. <li>8.4 MB</li>) and release date once the signed APK is in /downloads -->
-        <ul class="download-meta"><li>Version 1.0</li><li>Android 7.0 or newer</li><li>Free</li><li>English and Tagalog</li></ul>
+        <p>Free to download and use. Install it on your Android phone in a few taps, then follow the guide below if your phone asks for permission.</p>
+        <!-- The button always downloads the newest version: GitHub sends releases/latest/download/bantay-kalusugan.apk
+             to the file of that name in the latest release. The script at the end of this page fills in the version,
+             size and date from that release; the text below is only shown if GitHub can't be reached.
+             To publish a new version, see README.md, "Publish a new APK version". -->
+        <ul class="download-meta"><li data-apk="version">Version 2.5</li><li data-apk="size">4.7 MB</li><li data-apk="date" hidden></li><li>Android 7.0 or newer</li><li>Free</li><li>English and Tagalog</li></ul>
         <div class="hero-actions">
-          <!-- WHEN THE APK IS READY: put it at downloads/bantay-kalusugan.apk, then replace the next line with:
-          <a class="btn btn-light" href="downloads/bantay-kalusugan.apk" download type="application/vnd.android.package-archive">Download APK</a>
-          and remove the sentence "The download will appear here..." above. -->
-          <span class="btn btn-light btn-soon" role="button" aria-disabled="true">APK coming soon</span>
+          <a class="btn btn-light" id="apk-link" href="https://github.com/mendozaernestowork-blip/bantay-kalusugan/releases/latest/download/bantay-kalusugan.apk" type="application/vnd.android.package-archive">Download APK</a>
           <a class="btn btn-ghost" href="#install">How to install</a>
         </div>
+        <p class="release-link"><a href="https://github.com/mendozaernestowork-blip/bantay-kalusugan/releases/latest">Release notes</a></p>
       </div>
-      <div class="reveal"><div class="phone"><img src="images/screen-home.webp" width="600" height="1298" loading="lazy" alt="Bantay-Kalusugan home screen"></div></div>
+      <div class="reveal"><div class="phone"><img src="images/screen-result-todo.webp" width="600" height="1298" loading="lazy" alt="What you can work on: three suggestions, each showing how the two scores could change"></div></div>
     </div></div></section>
 
     <section class="section install-section" id="install"><div class="container">
@@ -448,7 +452,7 @@
       <div class="reveal">
         <span class="eyebrow">Sa Tagalog</span>
         <h2>Alamin ang iyong panganib sa diabetes at sakit sa puso.</h2>
-        <p>Ang Bantay-Kalusugan ay libreng Android app na nagtatanong tungkol sa iyong pang-araw-araw na gawi at kasaysayan ng kalusugan. Ipinapakita nito ang iyong antas ng panganib, kung ano ang nakaapekto rito, at maliliit na hakbang na puwede mong simulan. Screening lamang ito at hindi diagnosis.</p>
+        <p>Ang Bantay-Kalusugan ay libreng Android app na nagtatanong tungkol sa iyong pang-araw-araw na gawi at kasaysayan ng kalusugan. Nagbibigay ito ng dalawang score mula 0 hanggang 100, isa para sa diabetes at isa para sa sakit sa puso. Ipinapakita rin nito kung ano ang nakaapekto sa mga ito at maliliit na hakbang na puwede mong simulan. Screening lamang ito at hindi diagnosis.</p>
       </div>
       <div class="reveal">
         <h3>Paano i-install</h3>
@@ -467,8 +471,8 @@
       <div class="faq-list reveal">
         <details><summary>What is Bantay-Kalusugan?</summary><p>Bantay-Kalusugan (also written Bantay Kalusugan) is a free Android app that screens your risk for type 2 diabetes and heart disease from a short questionnaire, explains what shaped your result, and suggests small steps. It was built as a University of the East thesis project.</p></details>
         <details><summary>Does the app give a medical diagnosis?</summary><p>No. It is a screening aid for learning and research. Only a health professional, usually with tests such as blood sugar and cholesterol, can tell you whether you have a condition.</p></details>
-        <details><summary>What do Low, Moderate and High mean?</summary><p>Your answers add or remove points for diabetes and for heart health: 0 to 4 is low, 5 to 8 is moderate, and 9 or more is high. High means you have several risk factors worth looking at. It does not mean you are sick.</p></details>
-        <details><summary>Why does it show the "why" behind my result?</summary><p>The project is about explainable machine learning. Instead of a label alone, the app shows which answers moved your result up or down, so you can see what is worth working on.</p></details>
+        <details><summary>What do the two scores mean?</summary><p>Your answers add or remove points for diabetes and for heart disease, and each total is shown as a score from 0 to 100. 0 to 4 points is a lower lifestyle risk, 5 to 8 is medium, and 9 or more is higher. A higher score means more risk factors worth looking at. It is not a chance of getting sick, and it does not mean you are sick.</p></details>
+        <details><summary>Why does it show the "why" behind my result?</summary><p>The project is about explainable machine learning. Instead of a number alone, the app shows which answers moved each score up or down, and lets you try a change to see how your scores could move, so you can see what is worth working on.</p></details>
         <details><summary>How often should I answer the questionnaire?</summary><p>Every 6 to 12 months. Habits take time to change, so answering again sooner will not show a real difference.</p></details>
         <details><summary>What data does the app collect?</summary><p>Your name, mobile number or email, and your questionnaire answers, saved only after you give consent. You can delete your saved questionnaires in the app. See the <a href="privacy.html">privacy policy</a> for details.</p></details>
         <details><summary>Is it made for Filipino users?</summary><p>Yes. The questions are in Tagalog and English, the measurements use Asian cut-offs, and the model was trained on answers from 391 Filipino adults.</p></details>
@@ -531,6 +535,31 @@
     };
     window.addEventListener('scroll', updateProgress, { passive: true });
     updateProgress();
+
+    // Download button: show the newest release's version, size and date. The button works without this,
+    // because GitHub sends releases/latest/download/bantay-kalusugan.apk to the newest release's file.
+    (async () => {
+      const link = document.getElementById('apk-link');
+      if (!link || !window.fetch) return;
+      try {
+        const res = await fetch('https://api.github.com/repos/mendozaernestowork-blip/bantay-kalusugan/releases/latest');
+        if (!res.ok) return;
+        const release = await res.json();
+        const apks = (release.assets || []).filter((asset) => /\.apk$/i.test(asset.name));
+        const apk = apks.find((asset) => asset.name === 'bantay-kalusugan.apk') || apks[0];
+        if (!apk) return;
+        link.href = apk.browser_download_url;
+        const show = (key, text) => {
+          const item = document.querySelector(`[data-apk="${key}"]`);
+          if (item && text) { item.textContent = text; item.hidden = false; }
+        };
+        const version = String(release.tag_name || '').match(/\d+(?:\.\d+)*/);
+        if (version) show('version', 'Version ' + version[0]);
+        show('size', (apk.size / 1048576).toFixed(1) + ' MB');
+        const date = new Date(release.published_at || apk.updated_at);
+        if (!isNaN(date)) show('date', 'Released ' + date.toLocaleDateString('en-PH', { day: 'numeric', month: 'short', year: 'numeric' }));
+      } catch { /* offline or GitHub is busy: the text above and the link still work */ }
+    })();
   </script>
 </body>
 </html>

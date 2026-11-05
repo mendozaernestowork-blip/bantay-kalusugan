@@ -13,7 +13,7 @@ This folder is the whole site. There is no build step.
    - Leave "Add a README" unticked, then click **Create repository**.
 3. On the empty repo page, click **uploading an existing file**.
    Drag in **everything inside** this folder, not the folder itself:
-   `index.html`, `privacy.html`, `images/`, `downloads/`, the icons, `og-image.jpg`,
+   `index.html`, `privacy.html`, `images/`, the icons, `og-image.jpg`,
    `robots.txt`, `sitemap.xml`, `.nojekyll`, `README.md`. Then click **Commit changes**.
 4. Go to **Settings → Pages**. Under *Build and deployment*, set
    **Source: Deploy from a branch**, **Branch: main**, folder **/ (root)**, then click **Save**.
@@ -27,14 +27,40 @@ Only put website files in this repo. It is public, so never add the app's code, 
       a contact email you will check, and the data-retention period from your ethics approval.
 - [ ] Have your adviser or ethics reviewer read `privacy.html`.
 
-## When the signed APK is ready
+## Publish a new APK version
 
-1. Upload it to the repo as `downloads/bantay-kalusugan.apk` (Add file → Upload files, inside the `downloads` folder).
-2. In `index.html`, search for **WHEN THE APK IS READY** and swap the "coming soon" line for the download link shown there.
-3. In the app info near the top of `index.html`, replace the `"_comment"` line with the `downloadUrl` line it shows.
-4. Add the file size and release date (search `EDIT:` in `index.html`), and delete `downloads/PUT-APK-HERE.txt`.
+The **Download APK** button links to
+`https://github.com/mendozaernestowork-blip/bantay-kalusugan/releases/latest/download/bantay-kalusugan.apk`.
+GitHub sends that address to the file named `bantay-kalusugan.apk` in the newest release, so the button never
+needs editing. The page reads the version, size and date from that release by itself.
 
-GitHub updates the live site a minute or two after each commit.
+1. Rename the APK to exactly `bantay-kalusugan.apk` (all lowercase, no spaces).
+2. On this repo's page, click **Releases** (right side), then **Draft a new release**.
+3. Under the tag, type the version with a `v` in front, e.g. `v2.5`, and choose **Create new tag**.
+   Title: `Bantay-Kalusugan 2.5`.
+4. In the description, write two or three lines on what changed. The site's "Release notes" link opens this.
+5. Drag `bantay-kalusugan.apk` into the box for binaries and wait for the upload to finish.
+6. Leave **Set as a pre-release** unticked and **Set as the latest release** ticked, then click **Publish release**.
+7. Open the site on a phone, tap **Download APK**, and install it to check.
+8. Optional: in `index.html`, update `"softwareVersion"` near the top and the version and size text in the
+   download section. Visitors only see that text when GitHub can't be reached.
+
+Never commit the APK, keystores, `.env` or app code to this repo. It is public.
+
+### Before you build the next version (in the app repo)
+
+- In `android/app/build.gradle`, raise `versionCode` by 1 (it must always go up) and set `versionName`
+  to the version you will tag, e.g. `"2.6"`. Phones show `versionName` under App info.
+- Sign every version with the same key, or phones refuse the update ("App not installed") until the
+  old app is uninstalled.
+  - A debug APK (**Build → Build App Bundle(s) / APK(s) → Build APK(s)**; not the one the Run button
+    makes, which phones won't install from a download) is signed with the debug key of the computer that
+    built it (`%USERPROFILE%\.android\debug.keystore`). Build every update on that computer, or copy
+    that file to the computer you build on.
+  - A signed release APK: **Build → Generate Signed App Bundle or APK → APK**, create a keystore once,
+    keep it and its passwords outside the repo with a backup, and pick **release**. The file is
+    `android/app/release/app-release.apk`. Moving from a debug build to a release build means people
+    uninstall the old app once; their saved results come back when they sign in.
 
 ## Get found on Google
 
@@ -60,4 +86,3 @@ Note: on a project site like this one, search engines only read `robots.txt` fro
 - `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`: icons
 - `sitemap.xml`, `robots.txt`: for search engines
 - `.nojekyll`: tells GitHub to serve the files as-is
-- `downloads/`: where the APK goes
