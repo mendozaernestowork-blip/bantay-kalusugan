@@ -1,8 +1,0 @@
-Put the signed release APK in this folder, named exactly:
-
-    bantay-kalusugan.apk
-
-The Download button on the site links to downloads/bantay-kalusugan.apk.
-Cloudflare Pages allows files up to 25 MB. On GitHub Pages, files up to 100 MB work,
-but you can also attach the APK to a GitHub Release and change the button's link.
-Delete this text file before publishing.
