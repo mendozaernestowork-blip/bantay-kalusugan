@@ -20,7 +20,7 @@
   <meta property="og:image" content="https://mendozaernestowork-blip.github.io/bantay-kalusugan/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Bantay-Kalusugan app showing two lifestyle risk scores out of 100: diabetes 37 and heart disease 40" />
+  <meta property="og:image:alt" content="Bantay-Kalusugan app showing an overall result of moderate risk and two lifestyle scores out of 100: diabetes 37 and heart disease 40" />
   <meta property="og:locale" content="en_PH" />
   <meta property="og:locale:alternate" content="fil_PH" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -33,7 +33,7 @@
     "alternateName": "Bantay Kalusugan",
     "operatingSystem": "Android 7.0 or newer",
     "applicationCategory": "HealthApplication",
-    "softwareVersion": "2.5",
+    "softwareVersion": "3.3",
     "inLanguage": ["en", "fil"],
     "description": "A free screening app that gives two lifestyle risk scores, one for type 2 diabetes and one for heart disease, from a short questionnaire, explains which answers shaped them, and suggests small steps.",
     "url": "https://mendozaernestowork-blip.github.io/bantay-kalusugan/",
@@ -108,7 +108,7 @@
     .floating-card strong, .floating-card small { display: block; }
     .floating-card strong { font-size: 14px; }
     .floating-card small { margin-top: 2px; color: var(--muted); font-size: 12px; }
-    .card-a { top: 56%; left: 0; } .card-b { right: 0; bottom: 10%; }
+    .card-a { top: 70%; left: 0; } .card-b { right: 0; bottom: 10%; }
     .mini-icon { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 10px; color: var(--blue); background: var(--sky); font-weight: 800; }
 
     .trust-strip { border-block: 1px solid var(--line); background: #fbfdff; }
@@ -304,7 +304,7 @@
         <ul class="hero-facts"><li>Free</li><li>English and Tagalog</li><li>About 10 minutes</li><li>Not a diagnosis</li></ul>
       </div>
       <div class="hero-visual reveal">
-        <div class="phone"><img src="images/screen-result.webp" width="600" height="1298" fetchpriority="high" alt="Result screen with two lifestyle risk scores out of 100: diabetes 37 and heart disease 40, both in the medium range"></div>
+        <div class="phone"><img src="images/screen-result.webp" width="600" height="1298" fetchpriority="high" alt="Result screen: an overall result of moderate risk, then two lifestyle scores out of 100, diabetes 37 and heart disease 40, both in the medium range"></div>
         <div class="floating-card card-a"><span class="mini-icon" aria-hidden="true">✦</span><div><strong>Explainable</strong><small>See what raised or lowered it</small></div></div>
         <div class="floating-card card-b"><span class="mini-icon" aria-hidden="true">✓</span><div><strong>Made for Filipinos</strong><small>Trained on local answers</small></div></div>
       </div>
@@ -334,8 +334,8 @@
         <p>No jargon and no guessing what comes next. Four steps, and then a gentle reminder to check in again in 6 to 12 months.</p>
       </div>
       <ol class="steps">
-        <li class="step reveal"><h3>Sign up</h3><p>Use your mobile number or email. We send a one-time code to confirm it is you.</p></li>
-        <li class="step reveal"><h3>Give consent</h3><p>Read what is collected and why. Your answers are only saved after you agree.</p></li>
+        <li class="step reveal"><h3>Sign up</h3><p>Enter your name, your birthdate and your mobile number or email. We send a one-time code to confirm it is you.</p></li>
+        <li class="step reveal"><h3>Give consent</h3><p>Read what is collected and why, right on the sign-up page. Nothing is saved until you agree.</p></li>
         <li class="step reveal"><h3>Answer the questionnaire</h3><p>About 10 minutes on your habits, measurements and health history.</p></li>
         <li class="step reveal"><h3>See your result</h3><p>Your two scores, what shaped them, and small steps you can take, all on one screen.</p></li>
       </ol>
@@ -350,18 +350,18 @@
       <article class="showcase-row">
         <div class="showcase-copy reveal">
           <h3>Your home page, at a glance.</h3>
-          <p>Your latest diabetes and heart disease scores, how each one changed since last time, and how your everyday habits compare with health guidelines.</p>
-          <ul class="check-list"><li>Both scores and the change since last time</li><li>Habits compared with WHO guidelines</li><li>A new tip every day</li></ul>
+          <p>Your overall result, your latest diabetes and heart disease scores, how each one changed since last time, and how your everyday habits compare with health guidelines.</p>
+          <ul class="check-list"><li>Your overall result and both scores</li><li>Habits compared with WHO guidelines</li><li>A new tip every day</li></ul>
         </div>
         <div class="screenshot-frame reveal"><div class="screenshot-pair">
-          <div class="phone"><img src="images/screen-home.webp" width="600" height="1298" loading="lazy" alt="Home screen with the latest scores, diabetes 37 and heart disease 40 out of 100, and how each went down since last time"></div>
+          <div class="phone"><img src="images/screen-home.webp" width="600" height="1298" loading="lazy" alt="Home screen with the overall result, moderate risk, and the latest lifestyle scores, diabetes 37 and heart disease 40 out of 100"></div>
           <div class="phone"><img src="images/screen-home-habits.webp" width="600" height="1298" loading="lazy" alt="Habits at a glance: physical activity, vegetables and fruit, sweet drinks, sleep, BMI, and smoking and vaping compared with goals"></div>
         </div></div>
       </article>
       <article class="showcase-row reverse">
         <div class="showcase-copy reveal">
           <h3>A simple, guided questionnaire.</h3>
-          <p>Six short sections, one question at a time, with large answer buttons and every question in both Tagalog and English.</p>
+          <p>Five short sections, one question at a time, with large answer buttons and every question in both Tagalog and English.</p>
           <ul class="check-list"><li>Progress shown section by section</li><li>Bilingual questions and answers</li><li>Review your answers before submitting</li></ul>
         </div>
         <div class="screenshot-frame reveal"><div class="phone"><img src="images/screen-survey.webp" width="600" height="1298" loading="lazy" alt="Questionnaire screen, section 1 of 5: Impormasyon tungkol sa iyo, with the age question answered"></div></div>
@@ -373,7 +373,7 @@
           <ul class="check-list"><li>Which answers pushed each score up or down</li><li>Try a change and watch both scores move</li><li>Suggestions picked from your answers</li></ul>
         </div>
         <div class="screenshot-frame reveal"><div class="screenshot-pair">
-          <div class="phone"><img src="images/screen-result-why.webp" width="600" height="1298" loading="lazy" alt="How the model reads your answers: fried, fast and fatty food and family history raise the estimate, while rice, vegetables and fruit, and age lower it"></div>
+          <div class="phone"><img src="images/screen-result-why.webp" width="600" height="1298" loading="lazy" alt="How the model reads your answers: family history opened to show your answer, what it means and what you can do, with fried, fast and fatty food below it"></div>
           <div class="phone"><img src="images/screen-result-try.webp" width="600" height="1298" loading="lazy" alt="Try a change: with salty snacks cut to never, the diabetes score goes from 37 to 33 and the heart disease score from 40 to 37"></div>
         </div></div>
       </article>
@@ -413,7 +413,7 @@
              to the file of that name in the latest release. The script at the end of this page fills in the version,
              size and date from that release; the text below is only shown if GitHub can't be reached.
              To publish a new version, see README.md, "Publish a new APK version". -->
-        <ul class="download-meta"><li data-apk="version">Version 2.5</li><li data-apk="size">4.7 MB</li><li data-apk="date" hidden></li><li>Android 7.0 or newer</li><li>Free</li><li>English and Tagalog</li></ul>
+        <ul class="download-meta"><li data-apk="version">Version 3.3</li><li data-apk="size">3.9 MB</li><li data-apk="date" hidden></li><li>Android 7.0 or newer</li><li>Free</li><li>English and Tagalog</li></ul>
         <div class="hero-actions">
           <a class="btn btn-light" id="apk-link" href="https://github.com/mendozaernestowork-blip/bantay-kalusugan/releases/latest/download/bantay-kalusugan.apk" type="application/vnd.android.package-archive">Download APK</a>
           <a class="btn btn-ghost" href="#install">How to install</a>
@@ -474,7 +474,7 @@
         <details><summary>What do the two scores mean?</summary><p>Your answers add or remove points for diabetes and for heart disease, and each total is shown as a score from 0 to 100. 0 to 7 points is a lower lifestyle risk, 8 to 14 is medium, and 15 or more is higher. A higher score means more risk factors worth looking at. It is not a chance of getting sick, and it does not mean you are sick.</p></details>
         <details><summary>Why does it show the "why" behind my result?</summary><p>The project is about explainable machine learning. Instead of a number alone, the app shows which answers moved each score up or down, and lets you try a change to see how your scores could move, so you can see what is worth working on.</p></details>
         <details><summary>How often should I answer the questionnaire?</summary><p>Every 6 to 12 months. Habits take time to change, so answering again sooner will not show a real difference.</p></details>
-        <details><summary>What data does the app collect?</summary><p>Your name, mobile number or email, and your questionnaire answers, saved only after you give consent. They are used only for your own results, not for research or to train the model. You can delete your saved questionnaires in the app. See the <a href="privacy.html">privacy policy</a> for details.</p></details>
+        <details><summary>What data does the app collect?</summary><p>Your name, mobile number or email, and your questionnaire answers, saved only after you give consent. Your birthdate is asked only to check that you are 18 to 65 and is not saved. They are used only for your own results, not for research or to train the model. You can clear your saved results or delete your whole account in Settings. See the <a href="privacy.html">privacy policy</a> for details.</p></details>
         <details><summary>I forgot my password. What do I do?</summary><p>On the sign-in screen, tap <strong>Forgot password?</strong> and enter the mobile number or email you signed up with. We send a 6-digit code that expires after 10 minutes. Enter it with a new password. Changing your password signs you out on your other phones.</p></details>
         <details><summary>Is it made for Filipino users?</summary><p>Yes. The questions are in Tagalog and English, the measurements use Asian cut-offs, and the model was trained on answers from 337 of the 391 Filipino adults surveyed in Manila, those who did not already have diabetes, heart disease or a stroke.</p></details>
         <details><summary>Will there be an iPhone version?</summary><p>Not yet. The app is currently available for Android 7.0 or newer.</p></details>
@@ -486,7 +486,7 @@
         <span class="eyebrow">About the project</span>
         <h2>Who made this.</h2>
         <p>Bantay-Kalusugan was developed by BS Computer Science students at the University of the East, Manila, as part of the thesis <em>"Explainable and Fair Machine Learning for Early Detection and Prediction of Chronic Diseases in the Filipino Population."</em></p>
-        <!-- EDIT: add the team members and adviser here, e.g. <p>Research team: ... Adviser: ...</p> -->
+        <p>Research team: Michael Vincent Ascue, Charles Vincent Avellano, Richard Andrei Franco, Ernesto Mendoza Jr. and Steven Lee San Jose. Thesis adviser: Dr. Dino-Ver Federizo.</p>
         <p>The app's tips and wording are based on public health guidance. It is an academic project, not an official product of any hospital or government agency.</p>
       </div>
       <div class="reveal">
